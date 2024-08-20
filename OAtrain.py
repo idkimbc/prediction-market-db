@@ -11,4 +11,4 @@ llm = OpenAI(temperature=0, api_key=apikey)
 
 db_chain = SQLDatabaseChain(llm=llm, database = db, verbose = True)
 
-db_chain.run("what will be the average carbon monoxide content in the air for the next 2 days?")
+db_chain.run("what is the percentage increase or decrease in the air quality index compared from the first half of the day to the second half of the day")
