@@ -7,8 +7,8 @@ from apikey import apikey
 
 dburi = "sqlite:///testDatabase.db" 
 db = SQLDatabase.from_uri(dburi)
-llm = OpenAI(temperature=0, api_key=apikey, model="gpt-4o-mini")
+llm = OpenAI(temperature=0, api_key=apikey)
 
 db_chain = SQLDatabaseChain(llm=llm, database = db, verbose = True)
 
-db_chain.run("Do you think the average wind speed for the years 2024 - 2030 will be more than 12?")
+db_chain.run("what will be the average carbon monoxide content in the air for the next 2 days?")
