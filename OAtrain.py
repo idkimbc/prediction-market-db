@@ -11,4 +11,4 @@ llm = OpenAI(temperature=0, api_key=apikey)
 
 db_chain = SQLDatabaseChain(llm=llm, database = db, verbose = True)
 
-db_chain.run("what is the percentage increase or decrease in the air quality index compared from the first half of the day to the second half of the day")
+db_chain.run("Is there a high possibility of heatwaves based on the max and average temperature recorded for the next 5 years?")
